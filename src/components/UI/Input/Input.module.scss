@@ -1,0 +1,73 @@
+@import "global_variables";
+.input {
+  width: 100%;
+  max-width: 232px;
+  padding: 11px;
+  background: $color_white;
+  border-radius: 8px;
+  z-index: 1;
+  border: 2px solid transparent;
+  color: $color_black;
+  outline: none;
+  font-family: "Commissioner";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  transition: all 0.3s ease-out;
+  &--invalid {
+    border: 2px solid $color_red;
+  }
+  &:focus {
+    opacity: 1;
+  }
+  &--light-gray {
+    background: rgba(51, 51, 51, 0.1);
+    @media (max-width: map_get($max-width, lg)) {
+      max-width: 132px;
+    }
+  }
+  &--gray {
+    background: #dadbde;
+    @media (max-width: map_get($max-width, lg)) {
+      max-width: 132px;
+    }
+  }
+  &--sm {
+    @media (max-width: map_get($max-width, lg)) {
+      max-width: 136px;
+      line-height: 20px;
+    }
+  }
+  &--dark-gray {
+    background: #cbcbcb;
+    @media (max-width: map_get($max-width, lg)) {
+      max-width: 280px;
+    }
+  }
+  &--lg {
+    max-width: 188px;
+    max-height: 44px;
+    @media (max-width: map_get($max-width, lg)) {
+      max-width: 280px;
+    }
+  }
+  &--width216 {
+    max-width: 216px;
+    @media (max-width: map_get($max-width, lg)) {
+      max-width: 136px;
+    }
+  }
+  &--width216-last {
+    max-width: 216px;
+    @media (max-width: map_get($max-width, lg)) {
+      max-width: 280px;
+    }
+  }
+
+  &--width130 {
+    max-width: 130px;
+    @media (max-width: map_get($max-width, lg)) {
+      max-width: 136px;
+    }
+  }
+}

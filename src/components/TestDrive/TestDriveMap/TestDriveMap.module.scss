@@ -1,0 +1,23 @@
+@import "global_variables";
+.map {
+  height: 611px;
+  width: 100%;
+  max-width: 484px;
+  border-radius: 8px 8px 0 0;
+  @media (max-width: map_get($max-width, lg)) {
+    max-width: 100%;
+  }
+ 
+}
+.map-wrapper {
+  position: relative;
+  height: 651px;
+  width: 100%;
+  max-width: 484px;
+  @media (max-width: map_get($max-width, lg)) {
+    max-width: 100%;
+  }
+  @media (max-width: map_get($max-width, md)) {
+    display: none;
+  }
+}

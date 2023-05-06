@@ -1,0 +1,131 @@
+@import "global_variables";
+
+.contact {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-family: "Commissioner";
+  font-weight: 500;
+  color: $color_white;
+  transition: all 0.5s ease-out;
+
+  @media (max-width: map_get($max-width, lg)) {
+    padding: 13px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  @media (max-width: map_get($max-width, md)) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 40%;
+    background-color: $color_white;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: $color_black;
+  }
+  &__city {
+    margin: 0 29px 0 0;
+    background: transparent;
+    border: none;
+    color: #9eabb8;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    font-size: 14px;
+    @media (max-width: map_get($max-width, md)) {
+      padding: 13px 0;
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+      color: $color_black;
+    }
+  }
+  &__phone {
+    color: $color_white;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      border-bottom: 1px solid $color_white;
+    }
+    @media (max-width: map_get($max-width, md)) {
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 28px;
+      color: $color_black;
+    }
+  }
+  &--active {
+    @media (max-width: map_get($max-width, md)) {
+      padding-bottom: 100%;
+    }
+  }
+}
+.arrow {
+  margin: 0 8px;
+  transition: all 0.5s ease-out;
+
+  @media (max-width: map_get($max-width, md)) {
+    fill: $color_black;
+  }
+  &--active {
+    transform: rotate(180deg);
+  }
+}
+.contact-list {
+  position: absolute;
+  transform: translateY(-500px);
+  right: 0;
+  top: -12px;
+  transition: all 0.5s ease-out;
+  width: 430px;
+  background: $color_white;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 12px;
+  @media (max-width: map_get($max-width, lg)) {
+    left: 10px;
+    transform: translateY(-800px);
+  }
+  @media (max-width: map_get($max-width, md)) {
+    display: none;
+    left: -30px;
+    box-shadow: none;
+    
+  }
+  &__title {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    color: $color_black;
+    padding: 15px 18px;
+  }
+}
+
+.open {
+  transform: translateY(60px);
+  @media (max-width: map_get($max-width, lg)) {
+    transform: translateY(80px);
+  }
+  @media (max-width: map_get($max-width, md)) {
+    display: block;
+    position: relative;
+    transform: translateY(0px);
+  }
+}
+
+.md-active {
+  @media (max-width: map_get($max-width, md)) {
+    display: none;
+  }
+}

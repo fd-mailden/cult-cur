@@ -1,0 +1,39 @@
+@import 'global_variables';
+.brand {
+  &__list {
+    width: 100%;
+    list-style: none;
+    border-radius: 8px;
+    background: #f5f7f8;
+    padding: 15px;
+    max-width: 192px;
+    @media (max-width: map_get($max-width, sm)) {
+      max-width: 100%;
+      padding: 0 15px;
+      margin: 0;
+    }
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 0;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    &:hover {
+      border-bottom: 1px solid $color_light-gray;
+    }
+  }
+  &__link {
+    color: $color_black;
+  }
+  &__amount {
+    color: $color_light-gray;
+  }
+}

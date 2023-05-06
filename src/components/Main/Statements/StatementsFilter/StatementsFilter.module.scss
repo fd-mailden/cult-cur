@@ -1,0 +1,79 @@
+@import "global_variables";
+.st-filter {
+  z-index: 1;
+  width: 100%;
+  max-width: 484px;
+  text-align: start;
+  @media (max-width: map_get($max-width, lg)) {
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+
+  &__title {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color_white;
+    margin-bottom: 16px;
+  }
+  &__line {
+    margin-bottom: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__line > div {
+    &:first-child {
+      margin-right: 8px;
+    }
+  }
+  &__line > input {
+    &:first-child {
+      margin-right: 8px;
+    }
+  }
+  &__range {
+    margin-bottom: 24px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: map_get($max-width, sm)) {
+      flex-direction: column;
+
+    }
+  }
+  &__text {
+    padding-right: 15px;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $color_white;
+    opacity: 0.5;
+    margin-bottom: 18px;
+  }
+  &__link {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 22px;
+    color: $color_white;
+    opacity: 0.5;
+    text-decoration-line: underline;
+  }
+  &__item {
+    width: 100%;
+    max-width: 232px;
+    &:first-child {
+      margin-right: 8px;
+    }
+    @media (max-width: map_get($max-width, sm)) {
+      max-width: 100%;
+    }
+  }
+}

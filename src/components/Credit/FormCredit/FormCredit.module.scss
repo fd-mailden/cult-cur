@@ -1,0 +1,10 @@
+.credit-form {
+    max-width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  .credit-form > input {
+    margin-bottom: 20px;
+  }

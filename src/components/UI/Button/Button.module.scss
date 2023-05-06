@@ -1,0 +1,93 @@
+@import "global_variables";
+.button {
+  border: none;
+  background: $color_light-red;
+  border-radius: 8px;
+  color: $color_white;
+  font-family: "Commissioner";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  padding: 12px 16px 14px;
+  &:hover {
+    background: $color_red;
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
+  &--dark {
+    background: rgba(255, 255, 255, 0.2);
+    color: $color_light-gray;
+    &:hover {
+      background: rgba(255, 252, 252, 0.301);
+
+      color: $color_white;
+    }
+  }
+  &--height {
+    padding: 12px 16px;
+  }
+  &--height44 {
+    max-width: 188px;
+    max-height: 44px;
+  }
+  &--width {
+    padding: 12px 46px 14px;
+  }
+  &--primary {
+    width: 100%;
+  }
+  &--width165 {
+    padding: 12px 16px 14px;
+   
+    width: 100%;
+    max-width: 165px;
+    @media (max-width: map_get($max-width, md)) {
+      font-size: 14px;
+      line-height: 14px;
+      padding: 8px;
+    }
+  }
+  &--width165black {
+    width: 100%;
+    background-color: $color_black;
+    color: $color_white;
+    max-width: 165px;
+    @media (max-width: map_get($max-width, md)) {
+      font-size: 14px;
+      line-height: 14px;
+      padding: 8px;
+    
+    }
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.459);
+    }
+  }
+  &--show-black {
+    display: none;
+    @media (max-width: map_get($max-width, sm)) {
+      display: block;
+      width: 100%;
+      background-color: $color_black;
+      color: $color_white;
+      max-width: 165px;
+      margin: 0 auto;
+    }
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.459);
+    }
+  }
+
+  @media (max-width: map_get($max-width, md)) {
+    width: 100%;
+    max-width: 280px;
+  }
+  &--width-232 {
+    width: 100%;
+    max-width: 232px;
+    @media (max-width: map_get($max-width, md)) {
+      width: 100%;
+      max-width: 232px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import "global_variables";
+.counter {
+  width: 100%;
+  padding: 25px 54px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+}
+.num-wrapper {
+  font-family: "Roboto";
+  font-style: normal;
+  text-align: center;
+  color: $color_default-black;
+}
+.number {
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 75px;
+  text-align: center;
+  letter-spacing: 0.15px;
+}
+.name {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 0.15px;
+  color: #c4c4c4;
+}
+.line {
+  width: 1px;
+  height: 120px;
+  background-color: #c4c4c4;
+}

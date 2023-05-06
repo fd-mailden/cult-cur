@@ -1,0 +1,55 @@
+html,
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Commissioner";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  background: $color_white;
+ 
+  a,
+  button {
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+  }
+  a {
+    text-decoration: none;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+}
+.app {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  background: $color_white;
+
+  height: 100%;
+
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1220px;
+  padding: 0 15px;
+}
+.color-red {
+  color: $color_light-red;
+}
+.max316 {
+  max-width: 316px;
+}

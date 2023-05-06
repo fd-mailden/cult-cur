@@ -1,0 +1,35 @@
+@import "global_variables";
+
+.wrapper {
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  padding: 12px 16px;
+  top: 68px;
+  background: $color_black;
+  transition: all 0.5s ease-out;
+  &--transparent {
+    background: transparent;
+  }
+  @media (max-width: map_get($max-width, md)) {
+    top: 48px;
+  }
+}
+.filter {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  max-width: 988px;
+  @media (max-width: map_get($max-width, lg)) {
+    justify-content: space-evenly;
+  }
+}
+.scrolling {
+  background-color: $color_black;
+}
+
+.hurray {
+  svg {
+    fill: $color_light-red;
+  }
+}

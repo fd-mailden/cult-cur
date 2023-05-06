@@ -1,0 +1,71 @@
+@import "global_variables";
+.workers {
+  position: absolute;
+  z-index: 0;
+  top: 240px;
+  left: 0;
+  margin-top: -50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: map_get($max-width, lg)) {
+    overflow-x: scroll;
+    top: 300px;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  @media (max-width: map_get($max-width, sm)) {
+    top: 250px;
+  }
+}
+.worker {
+  margin: 0 5px;
+
+  width: 100%;
+  max-width: 316px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: "Commissioner";
+  font-style: normal;
+  color: $color-black;
+  &__text {
+    width: 316px;
+    border-radius: 10px;
+    background-color: $color-white;
+    padding: 25px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    position: relative;
+    margin-bottom: 40px;
+    box-shadow: 0px 30px 40px rgba(212, 217, 232, 0.2);
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -22px;
+      width: 0;
+      height: 0;
+      right: 40%;
+      border-style: solid;
+      border-width: 22px 22px 0 21px;
+      border-color: #ffffff transparent transparent transparent;
+    }
+  }
+  &__photo {
+    width: 56px;
+    object-fit: cover;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 8px;
+  }
+  svg {
+    width: 28px;
+    height: 28px;
+  }
+}

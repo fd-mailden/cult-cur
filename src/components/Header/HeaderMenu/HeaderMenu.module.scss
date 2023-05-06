@@ -1,0 +1,97 @@
+@import "global_variables";
+.header {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  width: 100%;
+  max-height: 68px;
+  padding: 21px 20px;
+  background: $color_black;
+  transition: all 0.5s ease-out;
+  @media (max-width: map_get($max-width, lg)) {
+    background: $color_black;
+  }
+  @media (max-width: map_get($max-width, md)) {
+    padding: 10px 20px;
+  
+  }
+  &--transparent {
+    background: rgba(255, 255, 255, 0.1);
+    @media (max-width: map_get($max-width, lg)) {
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+  &__inner {
+    z-index: 5;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 988px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo {
+    width: 100%;
+    max-width: 210px;
+    object-fit: cover;
+    @media (max-width: map_get($max-width, md)) {
+    max-width: 150px;
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    @media (max-width: map_get($max-width, lg)) {
+      display: none;
+    }
+  }
+}
+.scrolling {
+  background-color: $color_black;
+}
+
+.burger {
+  position: relative;
+  display: none;
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  border: none;
+  transition: all 0.5s ease-out;
+  &:hover {
+    background: rgba(255, 255, 255, 0.205);
+  }
+  @media (max-width: map_get($max-width, lg)) {
+    display: block;
+  }
+}
+.burger span {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 20px;
+  background: $color_white;
+  left: 9px;
+  top: 12px;
+  transition: all 0.5s ease-out;
+}
+.burger span:nth-of-type(2) {
+  top: 18px;
+}
+.burger span:nth-of-type(3) {
+  top: 24px;
+}
+.burger.active span:first-child {
+  top: 18px;
+  left: 18px;
+  transform: translate(-50%, 0%) rotate(45deg);
+}
+.burger.active span:nth-of-type(2) {
+  display: none;
+}
+.burger.active span:nth-of-type(3) {
+  top: 18px;
+  left: 18px;
+  transform: translate(-50%, 0%) rotate(-45deg);
+}

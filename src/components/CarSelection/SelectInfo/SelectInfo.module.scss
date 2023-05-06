@@ -1,0 +1,22 @@
+@import "global_variables";
+.select-item {
+  padding: 20px 18px 25px;
+  border: 1px solid #f4f6f8;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: $color_black;
+  font-family: "Commissioner";
+  font-style: normal;
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 8px 0;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    opacity: 0.5;
+  }
+}

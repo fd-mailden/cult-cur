@@ -1,0 +1,51 @@
+@import "global_variables";
+.slider {
+  width: 100%;
+  display: flex;
+  padding-right: 20px;
+  position: relative;
+  overflow-x: auto;
+  
+  .slick-next {
+    right: 20px;
+    width: 90px;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.089) 0%,
+      rgb(255, 255, 255) 100%
+    );
+    &__svg {
+      fill: #000;
+    }
+    &::before {
+      content: "";
+    }
+    &:hover {
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.089) 0%,
+        rgb(255, 255, 255) 100%
+      );
+    }
+    &:focus {
+      background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.089) 0%,
+        rgb(255, 255, 255) 100%
+      );
+    }
+    @media (max-width: map_get($max-width, md)) {
+      display: none;
+    }
+  }
+  @media (max-width: map_get($max-width, md)) {
+    display: none;
+  }
+ 
+}
+.md-none{
+  @media (max-width: map_get($max-width, md)) {
+    display: none;
+  }
+}

@@ -1,0 +1,43 @@
+@import "global_variables";
+.additional {
+  margin: 16px 0;
+  padding: 16px 0 23px 0;
+  border-top: 1px solid #444d51;
+  border-bottom: 1px solid #444d51;
+  &__title {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color_white;
+  }
+  &__subtitle {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color_white;
+    margin-bottom: 16px;
+  }
+  &__text {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $color_white;
+    opacity: 0.5;
+    margin: 23px 0 0;
+  }
+  &__selects {
+    max-width: 520px;
+  }
+  &__selects > div {
+    margin: 0 10px 16px;
+  }
+  &__selects > input {
+    margin: 0 10px 16px;
+  }
+}

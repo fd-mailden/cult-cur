@@ -1,0 +1,23 @@
+@import "global_variables";
+
+.main {
+  position: relative;
+  padding-top: 118px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  background: $color_black;
+
+}
+.top-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.center-img {
+  position: absolute;
+  top: 150px;
+  left: 230px;
+  z-index: 0;
+}

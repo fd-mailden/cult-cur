@@ -1,0 +1,10 @@
+
+@import 'global_variables';
+.info{
+  @media (max-width: map_get($max-width, md)) {
+margin: 0 auto;
+  }
+}
+.info > div {
+    margin: 0 10px 16px;
+  }

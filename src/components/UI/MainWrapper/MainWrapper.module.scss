@@ -1,0 +1,14 @@
+@import "global_variables";
+.main {
+  padding-top: 140px;
+  background: $color_black;
+  position: relative;
+  z-index: 1;
+
+  &--gray {
+    background: $color_light;
+  }
+  &--white {
+    background: $color_white;
+  }
+}

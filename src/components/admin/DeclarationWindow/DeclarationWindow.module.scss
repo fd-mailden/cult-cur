@@ -1,0 +1,56 @@
+@import "global_variables";
+.modal {
+  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+  background: #15202675;
+  backdrop-filter: blur(3.1px);
+  -webkit-backdrop-filter: blur(3.1px);
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  z-index: 10;
+}
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal_content {
+}
+
+.modal_content.active {
+  position: relative;
+  transform: scale(1);
+  width: 40vw;
+  background-color: $color_white;
+  height: 100%;
+  padding-top: 50px;
+}
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 8px;
+  background-color: transparent;
+  transition: all 0.1s ease-out;
+  &:hover {
+    transform: rotate(-90deg);
+  }
+  svg {
+    fill: $color_blue;
+    stroke: $color_blue;
+    width: 24px;
+    height: 24px;
+  }
+}

@@ -1,0 +1,17 @@
+
+@import "global_variables";
+.check-wrapper {
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border: 1px solid $color_blue;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+    transition: all 0.1s ease-out;
+    &--active{
+    background-color: $color_blue;
+      
+    }
+  }
+  

@@ -1,0 +1,30 @@
+@import "global_variables";
+.about-info {
+  width: 100%;
+  max-width: 565px;
+  text-align: start;
+  padding: 0 20px;
+
+  @media (max-width: map_get($max-width, md)) {
+    padding: 30px 20px;
+  }
+  &__title {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 42px;
+    color: $color_black;
+    margin-bottom: 24px;
+ 
+  }
+  &__text {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $color_black;
+  }
+}
+

@@ -1,0 +1,33 @@
+@import "global_variables";
+.header {
+  position: fixed;
+  z-index: 4;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 235px;
+  background-color: $color_primary-gray;
+  height: 100%;
+  padding: 32px;
+
+
+}
+
+.admin {
+  display: flex;
+  align-items: center;
+  margin-bottom: 44px;
+  &__image {
+    border-radius: 50%;
+    margin-right: 9px;
+  }
+  &__name {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $color_primary-black;
+  }
+}

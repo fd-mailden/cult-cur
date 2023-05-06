@@ -1,0 +1,28 @@
+@import "global_variables";
+.burger {
+  transition: all 0.5s ease-out;
+  transform: translateY(-100vh);
+  position: fixed;
+  height: 60vh;
+  width: 100vw;
+  background-color: azure;
+  z-index: 4;
+  padding: 90px 0 0;
+  background-color: $color_black;
+  box-shadow: -24px 11px 57px 7px rgba(18, 64, 100, 0.452);
+  @media (max-width: map_get($max-width, md)) {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+  }
+}
+.burger.active {
+  transform: translateY(0);
+}
+.triangle {
+  position: absolute;
+  right: 0;
+  top: 5%;
+}

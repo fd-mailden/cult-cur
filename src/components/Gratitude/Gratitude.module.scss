@@ -1,0 +1,24 @@
+@import "global_variables";
+.gratitude {
+  width: 100%;
+  text-align: center;
+  font-family: "Commissioner";
+  font-style: normal;
+  color: $color_white;
+  padding: 100px;
+  @media (max-width: map_get($max-width, lg)) {
+  padding: 50px 0;
+    
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,32 @@
+@import 'global_variables';
+.drive-form {
+  margin-top: 29px;
+  width: 100%;
+  max-width: 484px;
+  @media (max-width: map_get($max-width, lg)) {
+    margin-bottom: 70px;
+  }
+
+  &__subtitle {
+    margin: 24px 0;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color_white;
+    &:first-child {
+      margin: 16px 0;
+    }
+  }
+  &__section{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__section > div:first-child{
+    margin-right: 8px;
+  }
+  &__section > input:first-child{
+    margin-right: 8px;
+  }
+}

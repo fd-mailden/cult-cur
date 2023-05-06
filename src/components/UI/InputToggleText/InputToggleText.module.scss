@@ -1,0 +1,60 @@
+@import "global_variables";
+
+.form {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto";
+  font-style: normal;
+  margin-bottom: 10px;
+  &__edit {
+    display: flex;
+    align-items: center;
+  }
+  &__field {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color_default-black;
+  }
+  &__input {
+    font-weight: 400;
+    width: 250px;
+    font-size: 16px;
+    line-height: 19px;
+    color: $color_default-black;
+    padding: 5px 15px;
+    border: 1px solid $color_light-gray;
+    border-radius: 8px;
+    transition: all 0.2s ease-out;
+    background: transparent;
+    outline: none;
+    margin-right: 10px;
+    &:disabled {
+      border: none;
+      background: $color_light;
+    //   color: $color_white;
+    }
+
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &[type="number"] {
+      -moz-appearance: textfield;
+    }
+  }
+  &__button {
+    background-color: $color_blue;
+    color: $color_white;
+    border: none;
+    padding: 5px;
+    border-radius: 8px;
+    svg {
+      fill: $color_white;
+    }
+  }
+}

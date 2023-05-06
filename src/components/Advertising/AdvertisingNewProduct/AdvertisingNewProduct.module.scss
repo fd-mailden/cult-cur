@@ -1,0 +1,39 @@
+@import "global_variables";
+.advertising-wrapper {
+  margin-bottom: 40px;
+  height: 100%;
+}
+.advertising-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-height: 492px;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 0;
+
+  &__title {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    color: $color_white;
+    z-index: 1;
+    margin-bottom: 44px;
+    max-width: 254px;
+  }
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 30px;
+    z-index: 2;
+  }
+}
+
+.bg-top {
+  z-index: -1;
+  height: 100%;
+  object-fit: contain;
+}

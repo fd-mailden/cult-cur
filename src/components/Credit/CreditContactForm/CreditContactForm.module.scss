@@ -1,0 +1,77 @@
+@import "global_variables";
+@import "mixins";
+.credit-contact {
+  position: relative;
+  padding-top: 66px;
+  padding-bottom: 66px;
+  background: #dcdcdc;
+  z-index: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  font-family: "Commissioner";
+  font-style: normal;
+
+  &__inner {
+    z-index: 1;
+    @include container;
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 42px;
+    color: $color_333;
+    margin-bottom: 12px;
+    @media (max-width: map_get($max-width, md)) {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+  &__phone {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    color: $color_light-red;
+    @media (max-width: map_get($max-width, md)) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: $color_black;
+    opacity: 0.5;
+    margin-top: 16px;
+    @media (max-width: map_get($max-width, md)) {
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+  &__text {
+    max-width: 480px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $color_black;
+    opacity: 0.5;
+    a {
+      color: $color_black;
+      text-decoration: underline;
+    }
+  }
+}
+
+.credit-background {
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  @media (max-width: map_get($max-width, md)) {
+    display: none;
+  }
+}
+

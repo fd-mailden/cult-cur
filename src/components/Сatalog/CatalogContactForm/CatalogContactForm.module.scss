@@ -1,0 +1,77 @@
+@import "global_variables";
+.catalog-form {
+  padding: 72px 20px 61px;
+  text-align: center;
+  position: relative;
+  background-color: $color_light;
+  color: $color_black;
+  font-family: "Commissioner";
+  font-style: normal;
+  @media (max-width: map_get($max-width, md)) {
+  padding: 42px 20px 31px;
+    
+  }
+  &__right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @media (max-width: map_get($max-width, lg)) {
+      display: none;
+    }
+  }
+  &__left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    @media (max-width: map_get($max-width, lg)) {
+      display: none;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 42px;
+    margin-bottom: 24px;
+    @media (max-width: map_get($max-width, md)) {
+      font-size: 28px;
+    }
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    opacity: 0.5;
+    max-width: 800px;
+    margin: 0 auto;
+  
+  }
+  &__form {
+    margin: 36px auto;
+    width: 100%;
+    max-width: 740px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: map_get($max-width, lg)) {
+      max-width: 500px;
+      flex-wrap: wrap;
+    }
+    @media (max-width: map_get($max-width, md)) {
+      max-width: 280px;
+      button {
+        margin-top: 15px;
+      }
+    }
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    opacity: 0.5;
+    max-width: 650px;
+    margin: 0 auto;
+    a {
+      text-decoration: underline;
+      color: $color_black;
+    }
+  }
+}

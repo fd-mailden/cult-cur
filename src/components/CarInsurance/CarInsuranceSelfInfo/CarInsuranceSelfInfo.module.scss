@@ -1,0 +1,29 @@
+@import "global_variables";
+.form {
+  width: 100%;
+  max-width: 484px;
+  @media (max-width: map_get($max-width, lg)) {
+    max-width: 280px;
+    margin: 0 20px;
+  }
+  &__selects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__selects > div {
+    margin-bottom: 16px;
+  }
+  &__selects > input {
+    margin-bottom: 16px;
+  }
+}
+.check-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+.check-box > label {
+  margin-right: 30px;
+  margin-bottom: 13px;
+}

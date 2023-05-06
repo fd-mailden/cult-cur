@@ -1,0 +1,47 @@
+@import "global_variables";
+@import "mixins";
+.trade {
+  &__inner {
+    @include container;
+  }
+  &__title {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 42px;
+    color: $color_white;
+    margin-top: 30px;
+  }
+  &__subtitle {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color_white;
+    margin: 16px 0 16px;
+  }
+}
+.bg-top {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.bg-bottom {
+  position: absolute;
+  bottom: -280px;
+  left: 0;
+  z-index: -1;
+}
+.buttons {
+  text-align: end;
+  button:first-child {
+    margin-right: 20px;
+    @media (max-width: map_get($max-width, md)) {
+      margin-right: 0px;
+      margin-bottom: 15px;
+    }
+  }
+}

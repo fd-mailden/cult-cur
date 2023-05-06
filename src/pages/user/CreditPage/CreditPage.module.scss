@@ -1,0 +1,25 @@
+@import "global_variables";
+@import "mixins";
+.credit {
+  @include container;
+  margin-bottom: 90px;
+  &__title {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 42px;
+    margin: 20px 0 16px 0;
+    color: $color_white;
+  }
+  &__account {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: map_get($max-width, lg)) {
+      flex-direction: column;
+      &:first-child {
+        padding: 10px 0;
+      }
+    }
+  }
+}

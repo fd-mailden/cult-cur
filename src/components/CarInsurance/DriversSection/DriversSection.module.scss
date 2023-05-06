@@ -1,0 +1,39 @@
+@import "global_variables";
+.drivers {
+  margin: 16px 0 24px;
+  &__form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    @media (max-width: map_get($max-width, lg)) {
+      flex-wrap: wrap;
+      max-width: 280px;
+    }
+  }
+
+  @media (max-width: map_get($max-width, lg)) {
+    &__form > div {
+      margin-top: 15px;
+    }
+  }
+}
+.add-driver {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: transparent;
+  margin-top: 24px;
+  transition: all 0.3s ease-out;
+  &__text {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    margin-left: 8px;
+    color: $color_white;
+  }
+  &:hover {
+    opacity: 0.5;
+  }
+}

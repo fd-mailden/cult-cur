@@ -1,0 +1,22 @@
+@import "global_variables";
+.breadcrumbs {
+  display: flex;
+  margin: 20px 0 0;
+  @media (max-width: map_get($max-width, lg)) {
+    padding-left: 20px;
+  }
+  &__item {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  &__link {
+    color: #333333;
+    margin: 0 5px;
+  }
+  &--white {
+    color: $color_white;
+  }
+}

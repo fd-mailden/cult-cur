@@ -1,0 +1,55 @@
+@import "global_variables";
+.sale {
+  background-color: $color_white;
+  display: flex;
+  @media (max-width: map_get($max-width, md)) {
+    flex-direction: column;
+    align-items: center;
+  }
+  &__inner {
+    padding: 64px 0 50px 50px;
+    width: 70%;
+    @media (max-width: map_get($max-width, lg)) {
+      width: 75%;
+      padding: 50px 0 50px 30px;
+    }
+    @media (max-width: map_get($max-width, md)) {
+      width: 100%;
+      padding: 50px 20px;
+    }
+  }
+  &__title {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 42px;
+    color: $color_black;
+  }
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 566px;
+    margin: 30px 0;
+  }
+}
+.arrow {
+  border-bottom: 1px solid transparent;
+  transition: all 0.4s ease-out;
+  margin-left: 8px;
+  &:hover {
+    border-bottom: 1px solid $color_light-red;
+  }
+}
+.auto {
+  display: none;
+  @media (max-width: map_get($max-width, md)) {
+   display: block;
+  }
+}
+
+.slick-slider {
+  @media (max-width: map_get($max-width, md)) {
+    display: none;
+  }
+}

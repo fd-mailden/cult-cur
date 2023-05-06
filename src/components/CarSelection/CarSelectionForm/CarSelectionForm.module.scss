@@ -1,0 +1,39 @@
+@import "global_variables";
+.selected-form {
+  width: 100%;
+  max-width: 484px;
+  @media (max-width: map_get($max-width, lg)) {
+    max-width: 300px;
+    margin-left: 20px;
+  }
+  @media (max-width: map_get($max-width, md)) {
+    margin: 0px;
+  }
+  &__title {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color_black;
+    margin-bottom: 12px;
+  }
+}
+.input-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.input-section-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+  @media (max-width: map_get($max-width, lg)) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}

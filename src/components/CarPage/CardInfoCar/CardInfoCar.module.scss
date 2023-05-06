@@ -1,0 +1,83 @@
+@import "global_variables";
+@import "mixins";
+.card {
+  border-radius: 8px;
+  background-color: $color_light;
+  padding: 33px 30px 16px;
+  width: 100%;
+  max-width: 400px;
+  font-family: "Commissioner";
+  font-style: normal;
+  color: $color_black;
+  cursor: pointer;
+  @media (max-width: map_get($max-width, lg)) {
+    margin-top: 30px;
+  }
+  @media (max-width: map_get($max-width, md)) {
+    margin-top: 0px;
+  }
+  &:hover{
+    @include shadow;
+  }
+  &__head {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:  0 0 16px;
+    &:first-child {
+      border-bottom: 1px solid #dadfe4;
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    opacity: 0.5;
+  }
+}
+.sale {
+  display: flex;
+  &__percent {
+    color: #6fcf97;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    margin-right: 8px;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    opacity: 0.5;
+    text-decoration: line-through;
+  }
+}
+.car-characteristics {
+  width: 100%;
+  padding: 0;
+  list-style: none;
+  &__item {
+    margin: 4px 0;
+    display: flex;
+    width: 100%;
+  }
+  &__name {
+    width: 40%;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    opacity: 0.5;
+  }
+  &__value {
+    width: 60%;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,68 @@
+@import "global_variables";
+.statements {
+  position: relative;
+  width: 100%;
+  height: 673px;
+  z-index: 1;
+  background: $color_white;
+  @media (max-width: map_get($max-width, lg)) {
+    height: 100%;
+  }
+
+  &__inner {
+    display: flex;
+    z-index: 1;
+    background: $color_black;
+    height: 623px;
+    @media (max-width: map_get($max-width, lg)) {
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+  &__left {
+    width: 45%;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @media (max-width: map_get($max-width, lg)) {
+      width: 100%;
+      padding: 50px 20px 0 20px;
+      align-items: flex-start;
+    }
+  }
+  &__title {
+  z-index: 2;
+
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    color: $color_white;
+    max-width: 425px;
+    margin-bottom: 43px;
+    @media (max-width: map_get($max-width, lg)) {
+      max-width: 100%;
+      margin-bottom: 0px;
+    }
+  }
+  &__image {
+    @media (max-width: map_get($max-width, lg)) {
+      display: none;
+    }
+  }
+}
+.bg-image {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 0;
+}
+.filter-wrapper{
+  margin-top: 70px;
+  margin-left: 50px;
+  @media (max-width: map_get($max-width, lg)) {
+    margin: 0px;
+  }
+}

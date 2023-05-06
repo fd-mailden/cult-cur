@@ -1,0 +1,108 @@
+@import "global_variables";
+.board {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 90px;
+  @media (max-width: map_get($max-width, lg)) {
+    margin-bottom: 50px;
+  }
+  &__description {
+    width: 25%;
+    padding: 142px 0 0;
+    list-style: none;
+    text-align: end;
+    @media (max-width: map_get($max-width, lg)) {
+      width: 150px;
+    }
+  }
+  &__items {
+    width: 75%;
+    position: relative;
+    @media (max-width: map_get($max-width, lg)) {
+      width: 85%;
+    }
+  }
+  &__scroll {
+    display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__scroll > div:last-child {
+    margin-right: 205px;
+  }
+}
+.description-item {
+  text-align: start;
+  padding: 9px 1px 12px 57%;
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  background-color: #eceef1;
+  margin: 0;
+  p {
+    max-width: 150px;
+    margin: 0;
+    color: $color_black;
+    opacity: 0.5;
+  }
+  @media (max-width: map_get($max-width, lg)) {
+    padding: 9px 1px 12px 20px;
+  }
+}
+.description-item:nth-child(2n) {
+  background-color: $color_white;
+}
+
+.arrow-next {
+  position: absolute;
+  z-index: 111;
+  right: 0;
+  bottom: 20px;
+  height: 100%;
+  width: 150px;
+  border: none;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.089) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  svg {
+    fill: #000;
+  }
+  @media (max-width: map_get($max-width, md)) {
+    display: none;
+  }
+}
+
+.arrow-prev {
+  position: absolute;
+  z-index: 112;
+  left: 0;
+  bottom: 20px;
+  height: 76%;
+  width: 150px;
+  border: none;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.089) 0%,
+    rgb(255, 255, 255) 100%
+  );
+  opacity: 0;
+  &:hover {
+    opacity: 1;
+  }
+  svg {
+    transform: rotate(180deg);
+    fill: #000;
+  }
+  @media (max-width: map_get($max-width, md)) {
+    display: none;
+  }
+}

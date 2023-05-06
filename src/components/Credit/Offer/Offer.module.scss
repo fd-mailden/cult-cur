@@ -1,0 +1,84 @@
+@import "global_variables";
+.offer {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 18px;
+  width: 100%;
+  max-width: 484px;
+  margin: 12px 0;
+  font-family: "Commissioner";
+  font-style: normal;
+  cursor: pointer;
+  @media (max-width: map_get($max-width, sm)) {
+    width: 100%;
+    max-width: 150px;
+    flex-direction: column;
+    margin: 12px 6px;
+    justify-content: flex-start;
+  }
+  &__image {
+    margin: 0 12px;
+    border-radius: 50%;
+    @media (max-width: map_get($max-width, sm)) {
+      margin: 0;
+    }
+  }
+  &__light {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  &__dim {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    opacity: 0.5;
+    @media (max-width: map_get($max-width, sm)) {
+      font-weight: 400;
+    }
+  }
+}
+.offer-left {
+  display: flex;
+  align-items: center;
+  @media (max-width: map_get($max-width, sm)) {
+    width: 110px;
+    flex-wrap: wrap;
+    margin-bottom: 22px;
+  }
+}
+.offer-right {
+  text-align: start;
+  @media (max-width: map_get($max-width, sm)) {
+    width: 110px;
+  }
+}
+.offer-check {
+  display: flex;
+  align-items: center;
+  @media (max-width: map_get($max-width, sm)) {
+    width: 100%;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+.check-box {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  background-color: $color_white;
+  border: 1px solid $color_light-gray;
+  &__icon{
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 18px;
+    height: 18px;
+
+  }
+}

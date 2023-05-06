@@ -1,0 +1,19 @@
+@import "global_variables";
+.catalog-wrapper {
+  padding-top: 120px;
+}
+.catalog-filter {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1008px;
+  padding: 0 20px;
+}
+.catalog {
+  background-color: $color_white;
+  padding: 10px 20px;
+  &__inner {
+    width: 100%;
+    max-width: 988px;
+    margin: 0 auto;
+  }
+}

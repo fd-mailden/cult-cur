@@ -1,0 +1,58 @@
+@import "global_variables";
+.board-item {
+  width: 205px;
+}
+
+.top-image {
+  width: 205px;
+
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  max-width: 185px;
+  height: 128px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  &__img {
+    object-fit: cover;
+    width: 100%;
+  }
+  &__btn {
+    background: rgba(158, 171, 184, 0.5);
+    border: none;
+    border-radius: 0px 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    svg {
+      margin: 4px;
+    }
+    &:hover {
+      background: rgba(122, 120, 120, 0.712);
+    }
+  }
+}
+.board-list {
+  list-style: none;
+  padding: 0;
+  &__item {
+    width: 205px;
+    border-left: 1px solid rgba(158, 171, 184, 0.2);
+    width: 100%;
+    background-color: #eceef1;
+    padding: 9px 20px 12px;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color_black;
+    @media (max-width: map_get($max-width, md)) {
+      padding: 9px 14px 12px;
+    }
+  }
+}
+
+.board-list__item:nth-child(2n) {
+  background-color: $color_white;
+}

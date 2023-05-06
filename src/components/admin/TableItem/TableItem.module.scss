@@ -1,0 +1,33 @@
+@import "global_variables";
+.field-wrapper {
+  font-family: "Roboto";
+  font-style: normal;
+  color: #7d7d7d;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.01em;
+  background-color: $color_white;
+  &--active {
+    background-color: #f0f0f5;
+  }
+}
+.field-check {
+  padding-left: 25px;
+}
+.field-name {
+  padding: 20px 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  color: $color_default-black;
+}
+.field-date {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 130px;
+  justify-content: space-between;
+}

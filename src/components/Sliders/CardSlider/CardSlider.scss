@@ -1,0 +1,76 @@
+@import "global_variables";
+
+.car-slider {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+  position: relative;
+  @media (max-width: map_get($max-width, md)) {
+  }
+  &:hover {
+    .slick-next {
+      display: block;
+      right: 0px;
+      width: 46px;
+      height: 46px;
+      top: 88%;
+      background: rgba(182, 193, 204, 0.3);
+      border-radius: 8px;
+    }
+    .slick-prev {
+      display: block;
+      top: 80%;
+      left: 0;
+      z-index: 1;
+      transform: rotate(180deg);
+      width: 46px;
+      height: 46px;
+      background: rgba(182, 193, 204, 0.3);
+      border-radius: 8px;
+    }
+  }
+  .cars-arrow {
+    margin-left: 10px;
+  }
+  .slick-next {
+    display: none;
+  }
+  .slick-prev {
+    display: none;
+  }
+  .slick-next:before {
+    content: "";
+  }
+  .slick-prev:before {
+    content: "";
+  }
+}
+.img-slider {
+  width: 100%;
+  object-fit: cover;
+  height: 218px;
+  
+}
+.slide-icons {
+  background: rgba(182, 193, 204, 0.3);
+  border-radius: 0 8px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  padding: 10px;
+  &__item {
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+    &:first-child {
+      margin-right: 10px;
+    }
+    &:hover {
+      fill: $color_light-red;
+    }
+    &--active{
+      fill: $color_light-red;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@import "global_variables";
+.offers {
+  text-align: start;
+  width: 100%;
+  max-width: 484px;
+  font-family: "Commissioner";
+  font-style: normal;
+  color: $color_white;
+  transition: all 0.5s ease-out;
+  @media (max-width: map_get($max-width, lg)) {
+    margin: 30px auto;
+  }
+  &__wrapper {
+    @media (max-width: map_get($max-width, sm)) {
+      display: flex;
+      overflow-x: scroll;
+      justify-content: flex-start;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  &__button {
+    color: $color_white;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    opacity: 0.5;
+    background-color: transparent;
+    border: none;
+    transition: all 0.5s ease-out;
+    svg {
+      margin-left: 10px;
+      height: 16px;
+      width: 16px;
+    }
+    &--active {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

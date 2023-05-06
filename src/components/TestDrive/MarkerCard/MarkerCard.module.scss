@@ -1,0 +1,58 @@
+@import "global_variables";
+.marker {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 200px;
+  right: -120px;
+  background-color: $color_white;
+  padding: 20px 17px;
+  color: $color_black;
+  font-family: "Commissioner";
+  font-style: normal;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 288px;
+  &--relative {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  &__address {
+    color: $color_black;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    a {
+      color: $color_black;
+      text-decoration: underline;
+    }
+  }
+  &__phone {
+    color: $color_black;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    opacity: 0.5;
+    margin-top: 5px;
+  }
+}
+.marker-number {
+  display: flex;
+  border-bottom: 1px solid $color_light-gray;
+  align-items: center;
+  padding: 8px 8px 8px 0;
+  margin-bottom: 8px;
+  &__new {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 54px;
+    margin: 0 7px 0 12px;
+  }
+  &__all {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+  }
+}

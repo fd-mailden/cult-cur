@@ -1,0 +1,58 @@
+@import "global_variables";
+.feedback {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 484px;
+  font-family: "Commissioner";
+  font-style: normal;
+  color: $color_white;
+  text-align: center;
+  padding: 15px;
+  
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 32px;
+    @media (max-width: map_get($max-width, md)) {
+      margin-bottom: 18px;
+    }
+  }
+  &__textarea {
+    margin: 20px 0 0;
+    width: 100%;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    max-height: 135px;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    resize: none;
+    padding: 11px;
+    color: $color_black;
+    height: 100px;
+    @media (max-width: map_get($max-width, md)) {
+      margin: 10px 0 0;
+
+    }
+    &:focus {
+      border: none;
+    }
+  }
+}
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  input{
+    margin: 0 5px ;
+  }
+  @media (max-width: map_get($max-width, md)) {
+    flex-wrap: wrap;
+    input{
+      margin: 5px 0;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import "global_variables";
+.nav {
+  display: flex;
+  @media (max-width: map_get($max-width, md)) {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  &__link {
+    margin: 0 30px 0 0;
+    font-family: "Commissioner";
+    font-weight: 400;
+    line-height: 22px;
+    font-size: 14px;
+    color: $color_light-gray;
+    text-decoration: none;
+
+    @media (max-width: map_get($max-width, lg)) {
+      font-size: 18px;
+      font-family: "Commissioner";
+      font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+      color: $color_white;
+      margin: 13px ;
+    }
+    @media (max-width: map_get($max-width, md)) {
+      margin: 13px 0;
+    }
+
+    &:hover {
+      color: $color_white;
+    }
+  }
+}

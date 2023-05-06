@@ -1,0 +1,16 @@
+@import "../../../assets/style/config/global_variables";
+
+.range {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  &__text {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color_white;
+    opacity: 0.5;
+  }
+}

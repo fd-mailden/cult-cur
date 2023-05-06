@@ -1,0 +1,32 @@
+@import "global_variables";
+.menu-button {
+  border: none;
+  background: transparent;
+  position: relative;
+  z-index: 0;
+}
+.finc-list {
+  z-index: 2;
+  position: absolute;
+  top: -10px;
+  right: -110px;
+  padding: 0;
+  list-style: none;
+  border: 1px solid $color_default-black;
+  background-color: $color_light;
+
+  &__item {
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 1px solid $color_default-black;
+    &:last-child {
+      border: none;
+    }
+    &:hover{
+        padding: 6px;
+    }
+  }
+}
+.invisible{
+  opacity: 0;
+}

@@ -1,0 +1,16 @@
+@import "global_variables";
+.contact {
+  padding-top: 120px;
+  background: $color_light;
+  &__map {
+    max-width: 1028px;
+    padding: 0 20px;
+    margin: 0 auto;
+    @media (max-width: map_get($max-width, sm)) {
+      padding: 0;
+      h1 {
+        padding: 0  0 0 20px;
+      }
+    }
+  }
+}

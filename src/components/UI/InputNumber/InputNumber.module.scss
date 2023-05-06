@@ -1,0 +1,81 @@
+@import "global_variables";
+.input-wrapper {
+  padding: 10px 11px;
+  border-radius: 8px;
+  background-color: $color_white;
+  display: flex;
+  z-index: 1;
+  max-height: 44px;
+  width: 100%;
+  max-width: 188px;
+  &--max-width {
+    max-width: 232px;
+  }
+  &--max-width {
+    max-width: 232px;
+    @media (max-width: map_get($max-width, sm)) {
+      max-width: 100%;
+    }
+  }
+  &--sm-width {
+    max-width: 232px;
+    @media (max-width: map_get($max-width, lg)) {
+      max-width: 136px;
+    }
+  }
+  &--sm {
+    @media (max-width: map_get($max-width, lg)) {
+      max-width: 136px;
+    }
+  }
+  &--none{
+    display: none;
+  }
+  &--width130{
+    max-width: 130px;
+    @media (max-width: map_get($max-width, lg)) {
+      max-width: 136px;
+
+    }
+  }
+  &--light-gray{
+    background: rgba(51, 51, 51, 0.1);
+    max-width: 232px;
+    @media (max-width: map_get($max-width, sm)) {
+      max-width: 100%;
+    }
+  }
+}
+.input {
+  background: transparent;
+  z-index: 1;
+  width: 100%;
+  border: none;
+  color: $color_black;
+  opacity: 0.5;
+  outline: none;
+  font-family: "Commissioner";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  transition: all 0.3s ease-out;
+  &:focus {
+    opacity: 1;
+  }
+}
+.input::-webkit-outer-spin-button,
+.input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input[type="number"] {
+  -moz-appearance: textfield;
+}
+.currency {
+  color: $color_black;
+  opacity: 0.5;
+  font-family: "Commissioner";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+}

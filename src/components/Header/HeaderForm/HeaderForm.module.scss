@@ -1,0 +1,48 @@
+@import "global_variables";
+
+.form {
+  display: flex;
+  width: 100%;
+  max-width: 664px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  &__input {
+    background-color: transparent;
+    border: none;
+    width: 76%;
+    padding-left: 11px;
+    font-family: "Commissioner";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: rgba(255, 255, 255, 0.6);
+    outline: none;
+    @media (max-width:map_get($max-width, lg)) {
+      width: 59%;
+    }
+    @media (max-width:map_get($max-width, md)) {
+      width: 50%;
+    }
+    
+  }
+  @media (max-width:map_get($max-width, lg)) {
+    max-width: 390px;
+    justify-content: space-between;
+  }
+  
+}
+.brands {
+  display: flex;
+  align-items: center;
+  &__text {
+    font-family: "Commissioner";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $color_white;
+  }
+  &__icon{
+    margin: 0 11px;
+  }
+}

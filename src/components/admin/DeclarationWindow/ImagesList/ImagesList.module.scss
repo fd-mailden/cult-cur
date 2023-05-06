@@ -1,0 +1,76 @@
+@import "global_variables";
+@import "mixins";
+.list-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-top: 1px solid $color_light;
+}
+
+.image-list {
+  margin-top: 20px;
+  height: 150px;
+  overflow-y: scroll;
+  width: 100%;
+  max-width: 600px;
+  @include blue-scrollbar;
+}
+
+.list-item {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  padding: 5px 0;
+  width: 100%;
+
+
+  &__image {
+    object-fit: cover;
+    width: 100%;
+    max-width: 110px;
+    border-radius: 8px;
+  }
+  &__input {
+    border: 1px solid $color_light;
+    border-radius: 8px;
+    margin: 0 15px;
+    padding: 10px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-size: 16px;
+    line-height: 20px;
+    outline: none;
+    width: 350px;
+    transition: all 0.2s ease-out;
+    &:focus {
+      border: 1px solid $color_light-gray;
+    }
+  }
+}
+
+.btn-plus {
+  border: none;
+  background: transparent;
+  border-radius: 50px;
+  padding: 5px;
+  svg {
+    fill: $color_blue;
+    width: 30px;
+    height: 30px;
+  }
+  &:hover {
+    box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+  &:active {
+    box-shadow: none;
+  }
+  &--close {
+    padding: 10px;
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

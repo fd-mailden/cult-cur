@@ -1,0 +1,13 @@
+@import "global_variables";
+.error-text {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  margin:  16px;
+  color: $color_white;
+  span {
+    color: $color_red;
+  }
+}

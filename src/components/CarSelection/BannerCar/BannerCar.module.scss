@@ -1,0 +1,40 @@
+@import "global_variables";
+.banner-car {
+  position: relative;
+  z-index: 0;
+  max-width: 451px;
+  max-height: 597px;
+  font-family: "Commissioner";
+  font-style: normal;
+  color: $color_white;
+  @media (max-width: map_get($max-width, md)) {
+    display: none;
+  }
+  &__info {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 30px;
+  }
+  &__background {
+    object-fit: contain;
+    width: 100%;
+    height: 597px;
+    @media (max-width: map_get($max-width, md)) {
+      height: 451px;
+     }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 42px;
+    margin-bottom: 30px;
+  }
+  &__text{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    opacity: 0.5;
+  }
+}

@@ -1,0 +1,36 @@
+@import "global_variables";
+.steps {
+  display: flex;
+  padding: 0;
+  margin: 18px 0 40px;
+
+}
+.step {
+  margin-right: 24px;
+  list-style: inside;
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  color: $color_white;
+  opacity: 0.5;
+  @media (max-width: map_get($max-width, md)) {
+    margin-right: 8px;
+  
+  }
+  &__description {
+    display: none;
+    background-color: transparent;
+    font-weight: 400;
+  }
+}
+
+.active {
+  opacity: 1;
+  list-style: none;
+  .step__description {
+    display: inline;
+  }
+}
+

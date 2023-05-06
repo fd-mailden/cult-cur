@@ -1,0 +1,92 @@
+@import "global_variables";
+@import "mixins";
+.footer {
+  z-index: 1;
+  padding: 55px 0 71px 0;
+  background-color: $color_black;
+  @media (max-width: map_get($max-width, lg)) {
+    padding: 47px 0 0;
+  }
+  &__inner {
+    width: 100%;
+    max-width: 988px;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @media (max-width: map_get($max-width, lg)) {
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+  &__logo {
+    .footer__phone {
+      display: none;
+    }
+    @media (max-width: map_get($max-width, lg)) {
+      padding: 0 20px;
+      .footer__phone {
+        display: block;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    @media (max-width: map_get($max-width, lg)) {
+      flex-wrap: wrap;
+      padding: 30px 20px;
+      border-top: 1px solid #444d51;
+      border-bottom: 1px solid #444d51;
+    }
+  }
+  @media (max-width: map_get($max-width, lg)) {
+    &__info > ul {
+      margin-right: 12px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__phone {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color_white;
+  }
+  &__link {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $color_white;
+    opacity: 0.5;
+
+    &:hover {
+      text-decoration-line: underline;
+    }
+  }
+  &__contact {
+    @media (max-width: map_get($max-width, lg)) {
+      padding: 23px 20px 26px;
+      .footer__phone {
+        display: none;
+      }
+    }
+  }
+}
+.social-media {
+  margin: 10px 0;
+  display: flex;
+
+  &__icon {
+    margin-right: 8px;
+  }
+}

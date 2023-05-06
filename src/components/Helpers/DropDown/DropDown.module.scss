@@ -1,0 +1,42 @@
+@import "global_variables";
+.card {
+  border-radius: 8px;
+  background-color: #f5f7f8;
+  padding: 10px 23px;
+  width: 100%;
+  font-family: "Commissioner";
+  font-style: normal;
+  color: $color_black;
+  margin-bottom: 6px;
+  cursor: pointer;
+  &__name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+.description {
+  display: none;
+  margin: 5px 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  word-wrap: break-word;
+  width: 80%;
+  &--active {
+    display: block;
+  }
+}
+
+.arrow {
+  fill: #a9b5c0;
+  transition: all 0.3s ease-out;
+  &--active {
+    transform: rotate(180deg);
+  }
+}

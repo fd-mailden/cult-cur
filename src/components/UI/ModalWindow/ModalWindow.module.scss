@@ -1,0 +1,51 @@
+@import "global_variables";
+.modal {
+  margin: 0 auto;
+  height: 100vh;
+  width: 100vw;
+  background: #152026e3;
+  backdrop-filter: blur(8.1px);
+-webkit-backdrop-filter: blur(8.1px);
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+  z-index: 10;
+}
+.modal.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal_content {
+  border-radius: 12px;
+}
+
+.modal_content.active {
+  position: relative;
+  transform: scale(1);
+  width: 100%;
+  max-width: 988px;
+  
+}
+.close-btn {
+  position: absolute;
+  top: -38px;
+  right: 0;
+  width: 38px;
+  height: 38px;
+  background: rgba(255, 255, 255, 0.171);
+  border-radius: 8px;
+  border: none;
+  svg{
+    margin-top: 4px;
+    width: 24px;
+    height: 24px;
+  }
+}

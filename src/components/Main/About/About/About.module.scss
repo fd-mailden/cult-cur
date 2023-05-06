@@ -1,0 +1,18 @@
+@import "mixins";
+@import "global_variables";
+.about {
+  background-color: $color_white;
+  padding: 80px 0;
+  @media (max-width: map_get($max-width, md)) {
+    padding: 50px 0;
+  }
+  &__inner {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: map_get($max-width, md)) {
+      flex-direction: column-reverse;
+    }
+  }
+}

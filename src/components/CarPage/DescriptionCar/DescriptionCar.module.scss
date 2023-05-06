@@ -1,0 +1,27 @@
+@import "global_variables";
+.description {
+  width: 100%;
+  max-width: 566px;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  &__check {
+    padding: 11px 16px ;
+    border: 1px solid #f4f6f8;
+    border-radius: 8px;
+    background-color: $color_white;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+    color: #6fcf97;
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    svg {
+      fill: #6fcf97;
+      margin-right: 10px;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "../../../assets/style/config/global_variables";
+@import "../../../assets/style/config/mixins";
+.button {
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  width: 100%;
+  max-width: 224px;
+  text-align: center;
+  font-family: "Commissioner";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  color: $color_light-gray;
+  height: 40px;
+  &--md-none {
+    @media (max-width: map_get($max-width, md)) {
+      display: none;
+    }
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.281);
+    color: $color_white;
+  }
+}

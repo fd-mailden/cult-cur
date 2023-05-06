@@ -1,0 +1,53 @@
+@import "global_variables";
+.contact-item {
+  padding: 15px 18px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-family: "Commissioner";
+  color: $color_black;
+ 
+  &__info {
+    text-align: start;
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: flex-end;
+}
+  &__address {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+  }
+  &__phone {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color_black;
+
+    opacity: 0.5;
+  }
+  &__grade {
+    display: flex;
+    font-weight: 700;
+    @media (max-width: map_get($max-width, md)) {
+     display: none;
+    }
+  }
+  &__current {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 8px;
+  }
+  &__max {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+.contact-icon{
+    margin-left: 8px;
+}

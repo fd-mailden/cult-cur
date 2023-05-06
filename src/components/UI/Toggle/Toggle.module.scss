@@ -1,0 +1,26 @@
+@import "global_variables";
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #373f43;
+  &__button {
+    transition: all 0.5s ease-out;
+    background-color: transparent;
+    border: none;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #d7d9d9;
+    padding: 3px 15px;
+
+    &--active {
+      color: $color_white;
+      background-color: $color_light-red;
+      border-radius: 20px;
+    }
+  }
+}

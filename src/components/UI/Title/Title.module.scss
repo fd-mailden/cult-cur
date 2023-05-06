@@ -1,0 +1,22 @@
+@import "global_variables";
+.title {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 42px;
+  color: $color_white;
+  &--black {
+    color: $color_black;
+    margin: 30px 0 47px;
+    @media (max-width: map_get($max-width, md)) {
+      font-size: 28px;
+      line-height: 40px;
+      margin: 20px 0px;
+    }
+  }
+  @media (max-width: map_get($max-width, md)) {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}

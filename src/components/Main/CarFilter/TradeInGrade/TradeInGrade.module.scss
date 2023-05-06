@@ -1,0 +1,135 @@
+@import "global_variables";
+.grade {
+  margin: 20px 0 76px 0;
+
+  &__inner {
+    margin: 20px 0 26px 0;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: map_get($max-width, lg)) {
+      justify-content: space-evenly;
+    }
+    @media (max-width: map_get($max-width, md)) {
+      flex-direction: column;
+    }
+  }
+  &__left {
+    background: #9eabb85e;
+    border-radius: 8px;
+    padding: 17px 24px;
+    width: 100%;
+    max-width: 652px;
+    @media (max-width: map_get($max-width, lg)) {
+      max-width: 552px;
+    }
+    @media (max-width: map_get($max-width, md)) {
+      max-width: 100%;
+    }
+  }
+  &__right {
+    background-color: $color_white;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 316px;
+    padding: 18px 24px;
+    @media (max-width: map_get($max-width, lg)) {
+      max-width: 216px;
+    }
+    @media (max-width: map_get($max-width, md)) {
+      max-width: 100%;
+    }
+  }
+  &__title {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color_white;
+  }
+  &__buttons {
+    text-align: end;
+    @media (max-width: map_get($max-width, md)) {
+      text-align: center;
+    
+    }
+    button:not(:first-child) {
+      margin-left: 14px;
+      @media (max-width: map_get($max-width, md)) {
+        margin-left: 0px;
+        margin-top: 8px;
+      }
+    }
+  }
+}
+.garde-list {
+  margin: 8px 0;
+  width: 90%;
+  padding: 0;
+  list-style: none;
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  @media (max-width: map_get($max-width, lg)) {
+    width: 100%;
+  }
+  @media (max-width: map_get($max-width, md)) {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    column-count: 1;
+  }
+  &__item {
+    display: flex;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $color_white;
+    opacity: 0.5;
+    margin: 4px 0;
+  }
+  &__name {
+    width: 50%;
+  }
+  &__info {
+    width: 50%;
+  }
+}
+.grade-item {
+  font-family: "Commissioner";
+  font-style: normal;
+  color: $color_black;
+  &:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  &__name {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    opacity: 0.5;
+  }
+  &__info {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  &__input {
+    max-width: 90px;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    border: none;
+    &:disabled {
+      color: $color_black;
+      background-color: $color_white;
+    }
+  }
+  &__button {
+    border: none;
+    background: transparent;
+  }
+}

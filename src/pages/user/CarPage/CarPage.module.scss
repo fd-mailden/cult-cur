@@ -1,0 +1,23 @@
+@import "global_variables";
+.car {
+  max-width: 988px;
+  margin: 0 auto;
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 37px;
+    @media (max-width: map_get($max-width, lg)) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+}
+.slider-wrapper {
+  display: none;
+  @media (max-width: map_get($max-width, md)) {
+    display: block;
+    margin-top: 18px;
+  }
+}

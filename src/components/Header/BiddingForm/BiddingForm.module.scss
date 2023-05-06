@@ -1,0 +1,18 @@
+@import "global_variables";
+.form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $color_white;
+  border-radius: 8px;
+  max-width: 380px;
+  padding: 30px;
+  &__title {
+    color: $color_black;
+    margin: 20px 15px;
+  }
+}
+.form > input {
+  margin-bottom: 15px;
+}

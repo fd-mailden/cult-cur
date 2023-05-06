@@ -1,0 +1,51 @@
+@import "global_variables";
+@import "mixins";
+.banner {
+  position: relative;
+  padding-top: 66px;
+  padding-bottom: 64px;
+  z-index: 0;
+  @media (max-width: map_get($max-width, sm)) {
+    padding-top: 200px;
+  }
+  &__info {
+    @include container;
+  }
+  background-color: #e0e0e1;
+  font-family: "Commissioner";
+  font-style: normal;
+  &__title {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 42px;
+    max-width: 640px;
+    color: #333;
+  }
+  &__text {
+    color: $color_black;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    max-width: 480px;
+    opacity: 0.5;
+    margin: 16px 0 36px;
+    @media (max-width: map_get($max-width, lg)) {
+      opacity: 1;
+    }
+  }
+}
+.background {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  object-fit: cover;
+  @media (max-width: map_get($max-width, md)) {
+    max-height: 163px;
+    display: none;
+  }
+  @media (max-width: map_get($max-width, sm)) {
+    display: block;
+    max-height: 163px;
+  }
+}

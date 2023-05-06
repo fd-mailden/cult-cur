@@ -1,0 +1,44 @@
+@import "global_variables";
+.score {
+  width: 100%;
+  font-family: "Commissioner";
+  font-style: normal;
+  color: $color_black;
+  &__head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    opacity: 0.5;
+  }
+  &__center {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+.bar {
+margin: 10px 0;
+  position: relative;
+  width: 100%;
+  height: 6px;
+  padding: 2px 0;
+  background: linear-gradient(to right, #6fcf97, #ffc875, #eb5757);
+  border-radius: 8px;
+  &__dot {
+    position: absolute;
+    left: 50%;
+    top: -3px;
+    width: 12px;
+    height: 12px;
+    background-color: $color_light-gray;
+    border: 2px solid $color_white;
+    border-radius: 50%;
+  }
+}

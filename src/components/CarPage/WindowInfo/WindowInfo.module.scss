@@ -1,0 +1,142 @@
+@import "global_variables";
+.info {
+  margin: 25px auto;
+  text-align: center;
+  padding: 33px 31px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 8px;
+  background-color: $color_white;
+  font-family: "Commissioner";
+  font-style: normal;
+  color: $color_black;
+  @media (max-width: map_get($max-width, md)) {
+    max-width: 270px;
+    margin: 5px auto;
+    padding: 15px;
+  }
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #dadfe4;
+  @media (max-width: map_get($max-width, md)) {
+    padding-bottom: 10px;
+  
+  }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+  @media (max-width: map_get($max-width, md)) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  }
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    opacity: 0.5;
+  }
+  &__price {
+    width: 100%;
+    max-width: 339px;
+    background: rgba(235, 87, 87, 0.1);
+    border-radius: 8px;
+    color: $color_light-red;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    text-align: center;
+    padding: 4px;
+    cursor: pointer;
+  }
+}
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sale {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 16px 0 12px;
+  @media (max-width: map_get($max-width, md)) {
+    margin: 8px 0
+  
+  }
+  &__percent {
+    color: #6fcf97;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  &__price {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    text-decoration-line: line-through;
+    opacity: 0.5;
+  }
+}
+.benefit {
+  padding: 27px 0 8px;
+  border-bottom: 1px solid #dadfe4;
+  margin-bottom: 16px;
+  @media (max-width: map_get($max-width, md)) {
+    padding: 10px 0 8px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  @media (max-width: map_get($max-width, md)) {
+    line-height: 22px;
+    font-size: 16px;
+
+  
+  }
+  }
+  &__check {
+    margin-right: 10px;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+.description {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+  opacity: 0.5;
+  margin: 24px 0 21px;
+  @media (max-width: map_get($max-width, md)) {
+    margin: 10px 0 ;
+  
+  }
+}
+.button {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 32px;
+  color: $color_black;
+  text-decoration: underline;
+  box-sizing: border-box;
+  margin: 6px 0;
+}

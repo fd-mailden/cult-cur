@@ -1,0 +1,53 @@
+@import "global_variables";
+@import "mixins";
+.contact {
+  padding: 76px 20px 60px;
+  background-color: $color_light;
+  text-align: center;
+  &__title {
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 42px;
+    color: #333333;
+    margin-bottom: 31px;
+  }
+  &__form {
+    
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: map_get($max-width, lg)) {
+      justify-content: center;
+    }
+  }
+  @media (max-width: map_get($max-width, lg)) {
+    &__form > div {
+      margin: 4px 4px 8px;
+    }
+    &__form > input {
+      margin: 4px;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 655px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: $color_black;
+    opacity: 0.5;
+    margin-top: 31px;
+  }
+  &__link {
+    @include gray-link;
+    font-weight: 700;
+  }
+}

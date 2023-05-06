@@ -1,0 +1,31 @@
+@import "global_variables";
+.drive-form {
+  margin-top: 29px;
+  width: 100%;
+  max-width: 504px;
+  @media (max-width: map_get($max-width, lg)) {
+    margin-bottom: 70px;
+  }
+}
+.input-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.input-section > input:first-child {
+  margin-right: 8px;
+}
+.salon {
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  width: 100%;
+  background-color: $color_white;
+  color: $color_light-gray;
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 15px;
+
+}

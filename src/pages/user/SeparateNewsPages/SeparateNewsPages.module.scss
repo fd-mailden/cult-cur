@@ -1,0 +1,51 @@
+@import "global_variables";
+@import "mixins";
+.news {
+  background-color: $color_white;
+  font-family: "Commissioner";
+  font-style: normal;
+  color: $color_black;
+  margin: 0 auto;
+  max-width: 988px;
+  &__image {
+    object-fit: contain;
+    width: 100%;
+    margin: 36px 0;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  &__subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 14px;
+  }
+}
+.content-wrapper {
+  width: 100%;
+  max-width: 691px;
+  margin: 0 0 83px;
+  @media (max-width: map_get($max-width, lg)) {
+    padding: 0 20px;
+  }
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 27px;
+}
+.tag {
+  padding: 4px 12px;
+  background: $color_light-gray;
+  border-radius: 20px;
+  font-family: "Commissioner";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: $color_white;
+  margin-right: 10px;
+}

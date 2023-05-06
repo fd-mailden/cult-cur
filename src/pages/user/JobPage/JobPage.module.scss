@@ -1,0 +1,20 @@
+@import "global_variables";
+.job {
+  width: 100%;
+  max-width: 988px;
+  margin: 0 auto;
+  @media (max-width: map_get($max-width, lg)) {
+    h1 {
+      padding: 0 20px;
+    }
+  }
+  &__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @media (max-width: map_get($max-width, lg)) {
+      flex-direction: column;
+      padding: 0 20px;
+    }
+  }
+}

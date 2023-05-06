@@ -1,0 +1,37 @@
+@import "global_variables";
+.list {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  width: 100%;
+  max-width: 141px;
+  text-align: start;
+  @media (max-width: map_get($max-width, md)) {
+    max-width: 125px;
+  }
+
+  &__title {
+    margin: 0 0 16px 0;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    color: $color_white;
+  }
+  &__item {
+    margin-bottom: 10px;
+    a {
+      font-family: "Commissioner";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 22px;
+      color: $color_white;
+      opacity: 0.5;
+      &:hover {
+        text-decoration-line: underline;
+      }
+    }
+  }
+}

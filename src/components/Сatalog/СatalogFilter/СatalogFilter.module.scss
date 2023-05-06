@@ -1,0 +1,36 @@
+@import "global_variables";
+.catalog-filter {
+  margin: 30px 0;
+  display: flex;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    max-width: 188px;
+    border-radius: 8px;
+    border-bottom: 2px solid $color_white;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    &--active {
+      border-bottom: 2px solid $color_black;
+    }
+  }
+  &__item:not(:first-child) {
+    margin-left: 12px;
+  }
+  &__name {
+    position: absolute;
+    top: 8px;
+    left: 13px;
+    font-family: "Commissioner";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    color: $color_black;
+  }
+}
